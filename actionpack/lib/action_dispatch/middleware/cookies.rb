@@ -9,6 +9,7 @@ require "rack/utils"
 module ActionDispatch
   class Request
     def cookie_jar
+      puts "GETTING TO COOKIE JAR"
       fetch_header("action_dispatch.cookies") do
         self.cookie_jar = Cookies::CookieJar.build(self, cookies)
       end
