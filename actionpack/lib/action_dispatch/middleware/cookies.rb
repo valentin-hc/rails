@@ -413,6 +413,7 @@ module ActionDispatch
       end
 
       def write(headers)
+        puts "HEADERS #{headers}"
         if header = make_set_cookie_header(headers[HTTP_HEADER])
           headers[HTTP_HEADER] = header
         end
