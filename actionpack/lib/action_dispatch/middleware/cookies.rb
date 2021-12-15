@@ -411,7 +411,7 @@ module ActionDispatch
 
       def write(headers)
         puts "HEADERS #{headers}"
-        binding.pry
+        headers = nil
         if header = make_set_cookie_header(headers[HTTP_HEADER])
           headers[HTTP_HEADER] = header
         end
